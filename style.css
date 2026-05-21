@@ -1,0 +1,610 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --mainColor:#436b95;
+    --secondColor:#767F9E;
+    --hoverColor:#723d4b;
+    --blackColor:black;
+    --whiteColor:white;
+    --background:#AD5C71;
+}
+
+
+/* NavBar */
+nav{
+
+    padding: 0 5% !important;
+    background-color: var(--hoverColor);
+    margin-bottom: 50px;
+}
+nav #link{
+    color: var(--whiteColor);
+    transition: all 2s;
+}
+nav #link:hover{
+    color: var(--secondColor);
+    scale: 1.1;
+
+}
+nav #logo{
+    font-size: 30px;
+    color:lightpink;
+    font-weight: bold;
+    transition: all 2s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;
+}
+nav #logo:hover{
+    color: var(--secondColor);
+    scale: 1.1;
+
+}
+/* Header section */
+.header{
+    background-color: var(--background);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-top: 5%;
+
+}
+.header .text{
+    width: 400px;
+    color: var(--whiteColor);
+    font-size: 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+.header .text h5{
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.header .text p{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.header .text #cv{
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    background-color: var(--secondColor);
+    color: var(--whiteColor);
+    border-radius: 10px;
+    font-size: .8em;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    transition: all 2s;
+}
+.header .text #cv:hover{
+    scale: 1.1;
+    background-color: var(--hoverColor);
+}
+.header .text .icons #icon{
+    font-size: 2em;
+    color: var(--whiteColor);
+    transition: all 2s;
+    margin-bottom: 20px;
+}
+.header .text .icons #icon:hover{
+    scale: 1.2;
+    color: var(--hoverColor);
+}
+.header .image{
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px 4px var(--hoverColor), -2px -2px 3px 4px var(--hoverColor);
+    transition: all 2s;
+}
+.header .image img{
+    width: 100%;
+    height: 450px;
+    border-radius: 20px;
+}
+.header .image:hover{
+    scale: 1.1;
+}
+@media screen and (max-width:900px) {
+.header{
+   padding: 15% ;
+   height: 50%;
+   flex-direction: column;
+
+
+}
+.header .text{
+   width: 50%;
+   font-size: .7em;
+   align-items: center;
+   
+}
+.header .text p{
+    margin-bottom: 0;
+}
+
+.header .image{
+    width: 200px;
+    align-self: center;
+  
+} 
+.header .image img{
+    height: 300px;
+
+}
+}
+@media screen and (max-width:460px) {       
+.header{
+   flex-direction: column;
+   align-items: center;
+   padding: 20%;
+}
+.header .text{
+    text-align: center;
+
+   align-items: center;
+}
+.header .image{
+    width: 200px;
+    margin-top: 20px;
+}
+.header .image img{
+    height: 300px;
+}
+}
+/* AboutMe section */
+.aboutme{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    padding-top: 10%;
+}
+.aboutme h1{
+    color: var(--mainColor);
+    margin: 65px ;
+    align-self: center;
+    transition: all 2s;
+}
+.aboutme h1:hover{
+    scale: 1.1;
+    color: var(--hoverColor);
+}
+.aboutme p{
+    width: 600px;
+    height: 150px;
+    font-size:18px;
+    color: aliceblue;
+    background-color:var(--blackColor);
+    border-radius: 30px 0px;
+    padding: 30px 20px;
+    margin-bottom: 130px;
+    box-shadow:2px 2px 5px 5px gray;
+}
+@media screen and (max-width:900px) {
+    .aboutme{
+        flex-direction: column;
+        font-size: 15px;
+}
+.aboutme h1{
+    margin: 30px ;
+}
+.aboutme p{
+    width: 60%;
+    height:70%;
+    font-size:.8em;
+    padding: 40px;
+}
+}
+@media screen and (max-width:460px){
+     .aboutme{
+        font-size: 15px;
+}
+.aboutme h1{
+    margin: 30px ;
+}
+.aboutme p{
+    width: 40%;
+    height:50%;
+    flex-direction: column;
+}
+}
+/* MySkills     */
+   
+.myskills{
+    width: 100%;
+    padding: 7% 5%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+    background-color: var(--background);
+    margin-bottom: 50px ;
+    padding-top: 15%;
+
+}
+.myskills h2{
+    color: var(--whiteColor);
+    font-size: 45px;
+    align-self: center;
+    margin-bottom: 40px;
+    text-align: center;
+    transition: all 2s;
+    font-weight: bold;
+
+    
+}
+.myskills h2:hover{
+    scale: 1.2;
+    color: cyan;
+
+}
+.myskills .skills p {
+    font-size: 20px;
+    color: var(--whiteColor);
+    margin-bottom: 5px;
+}  
+
+.myskills .skills .skill{
+    background-color: var(--blackColor);
+    width: 80%;
+    border-radius: 30px;
+}
+
+
+.myskills .skills .skill .fgskill{
+    border-radius: 30px;
+    color: var(--whiteColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 20px;
+    padding: 5px;
+
+}
+.myskills .skills .skill .html{
+    width: 95%;
+    background-color: cornflowerblue;
+
+}
+.myskills .skills .skill .css{
+    width: 85%;
+    background-color: rgb(227, 89, 227);
+
+}   
+.myskills .skills .skill .js{
+    width: 75%;
+    background-color: darkgreen;
+
+}
+.myskills .skills .skill .bs{
+    width: 70%;
+    background-color: darkorange;
+
+}
+
+/* Projects */
+.projects{
+    width: 100%;
+    padding: 10% 10px;
+
+}
+
+.projects h3{
+    color: var(--mainColor);
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 2s;
+    margin-bottom: 70px;
+
+}
+.projects h3:hover{
+    scale: 1.1;
+    color: var(--hoverColor);
+
+}
+.projects .parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:30px;
+
+}
+.projects .parent .project{
+    background-color: var(--secondColor);
+    width: 300px;
+    border-radius: 40px 0;
+    margin-bottom: 30px;
+   
+}
+
+.projects .parent .project .image1{
+    background-image: url(./meal.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image2{
+    background-image: url(./task1.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image3{
+    background-image: url(./task2.png);
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image4{
+    background-image: url(./task3.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image5{
+    background-image: url(./task4.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image6{
+    background-image: url(./task5.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image7{
+    background-image: url(./task6.png);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image8{
+    background-image: url(./task7.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .image9{
+    background-image: url(./task8.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+.projects .parent .project .image10{
+    background-image: url(./task9.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+.projects .parent .project .image11{
+    background-image: url(./task10.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    border-radius: 40px 0 0 0;
+    
+}
+
+.projects .parent .project .link{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projects .parent .project .link a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--hoverColor);
+    color: var(--whiteColor);
+    padding: 10px 15px;
+    border-radius: 20px  0;
+    transition: all 2s;
+
+}
+.projects .parent .project .link a:hover{
+    scale: 1.1;
+    color: var(--hoverColor);
+    background-color: var(--whiteColor);
+
+}
+
+@media screen and (max-width:900px) {
+    .projects{
+    width: 100%;
+    padding: 20% 10px;
+    }
+    .projects .parent{
+      justify-content: center; 
+
+}
+
+
+}
+
+/* Contact ME */
+.contactme{
+    width: 100%;
+    padding-top: 10%;
+}
+
+.contactme h1{
+    color: var(--mainColor);
+    font-size: 45px;
+    text-align: center;
+    font-weight: bold;
+    transition: all 2s;
+    margin-bottom: 50px;
+
+}
+.contactme h1:hover{
+    scale: 1.2;
+    color: var(--hoverColor);
+}
+
+.contactme .bg{
+    background-color: var(--blackColor);
+     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.contactme .bg .box{
+    width: 30%;
+    background-color: var(--background);
+    font-size: 15px;
+    color: var(--whiteColor);
+    padding: 30px;
+    margin: 40px;
+    border-radius: 0 30px ;
+    box-shadow: 3px 3px 2px 2px var(--hoverColor), -3px -3px 2px 2px var(--hoverColor);
+
+}
+.contactme .bg .box input{
+    color: var(--whiteColor);
+    border-radius: 5px;
+    margin: 10px;
+    padding-left: 20px;
+
+
+
+}
+.contactme .bg .box .message{
+    width: 90%;
+    height: 130px;
+    background-color: var(--whiteColor);
+    font-size: 10px;
+    color: black;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contactme .bg .box .send{
+    background-color: var(--whiteColor);
+    text-align: center;
+    margin: 10px auto;
+    width: 30%;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    padding: 5px;
+}
+@media screen and (max-width:900px) {
+
+.contactme{
+    width: 100%;
+    padding-top: 20%;
+}
+.contactme .bg .box{
+    width:60%;
+    margin-top: 50px;
+
+}
+
+}
+@media screen and (max-width:460px) {
+
+
+.contactme .bg .box{
+    width:70%;
+
+}
+
+}
+footer{
+    display: flex !important;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+}
+
+footer div{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+@media screen and (max-width:900px) {
+
+
+footer div{
+    font-size: 15px;
+
+}
+    
+}
+@media screen and (max-width:460px) {
+footer div{
+
+    font-size: 13px;    
+}
+
+}
