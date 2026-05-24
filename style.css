@@ -573,7 +573,7 @@ nav #logo:hover{
 }
 
 .contactme .bg{
-    min-height: 500px;
+    height: 500px;
     background-color: var(--blackColor);
     display: flex;
     flex-wrap: wrap;
