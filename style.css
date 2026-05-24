@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 :root{
     --mainColor:#436b95;
@@ -52,7 +53,7 @@ nav #logo:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     align-content: center;
-    padding-top: 5%;
+    padding-top: 7%;
 
 }
 .header .text{
@@ -117,28 +118,24 @@ nav #logo:hover{
 @media screen and (max-width:900px) {
 .header{
    padding: 15% ;
-   height: 50%;
+   height: 40%;
    flex-direction: column;
-
-
 }
 .header .text{
    width: 50%;
    font-size: .7em;
    align-items: center;
-   
 }
 .header .text p{
     margin-bottom: 0;
 }
-
 .header .image{
     width: 200px;
     align-self: center;
-  
-} 
+  } 
 .header .image img{
-    height: 300px;
+    height: 370px;
+    margin-bottom: 0;
 
 }
 }
@@ -146,16 +143,25 @@ nav #logo:hover{
 .header{
    flex-direction: column;
    align-items: center;
-   padding: 20%;
+   padding: 20% 10px;
+
+}
+.header .text h5{
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.header .text p{
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 .header .text{
     text-align: center;
-
-   align-items: center;
+    align-items: center;
 }
 .header .image{
     width: 200px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .header .image img{
     height: 300px;
@@ -170,13 +176,15 @@ nav #logo:hover{
     align-content: center;
     flex-direction: column;
     font-size: 30px;
-    padding-top: 10%;
+    padding: 10%;
 }
 .aboutme h1{
     color: var(--mainColor);
-    margin: 65px ;
     align-self: center;
+    font-weight: bold;
     transition: all 2s;
+    margin: 80px;
+    cursor:context-menu;
 }
 .aboutme h1:hover{
     scale: 1.1;
@@ -189,17 +197,19 @@ nav #logo:hover{
     color: aliceblue;
     background-color:var(--blackColor);
     border-radius: 30px 0px;
-    padding: 30px 20px;
-    margin-bottom: 130px;
+    padding: 40px ;
     box-shadow:2px 2px 5px 5px gray;
+    margin: 110px;
 }
 @media screen and (max-width:900px) {
     .aboutme{
         flex-direction: column;
         font-size: 15px;
+        padding: 10%;
 }
 .aboutme h1{
-    margin: 30px ;
+    margin: 40px ;
+    
 }
 .aboutme p{
     width: 60%;
@@ -209,30 +219,32 @@ nav #logo:hover{
 }
 }
 @media screen and (max-width:460px){
-     .aboutme{
-        font-size: 15px;
+.aboutme{
+    font-size: 15px;
+    padding: 35% 15%;
+
 }
 .aboutme h1{
-    margin: 30px ;
+    margin: 25px ;
 }
 .aboutme p{
-    width: 40%;
-    height:50%;
+    width: 80%;
+    height:40%;
     flex-direction: column;
+    margin: 50px 20px ;
 }
 }
 /* MySkills     */
    
 .myskills{
     width: 100%;
-    padding: 7% 5%;
+    height: 100vh;
+    padding:  5%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-flow: column;
     background-color: var(--background);
-    margin-bottom: 50px ;
-    padding-top: 15%;
 
 }
 .myskills h2{
@@ -243,12 +255,14 @@ nav #logo:hover{
     text-align: center;
     transition: all 2s;
     font-weight: bold;
+    cursor:context-menu;
+
 
     
 }
 .myskills h2:hover{
     scale: 1.2;
-    color: cyan;
+    color: rgb(166, 196, 253);
 
 }
 .myskills .skills p {
@@ -278,12 +292,12 @@ nav #logo:hover{
 }
 .myskills .skills .skill .html{
     width: 95%;
-    background-color: cornflowerblue;
+    background-color:  rgb(227, 89, 227);
 
 }
 .myskills .skills .skill .css{
     width: 85%;
-    background-color: rgb(227, 89, 227);
+    background-color: cornflowerblue;
 
 }   
 .myskills .skills .skill .js{
@@ -297,10 +311,44 @@ nav #logo:hover{
 
 }
 
+@media screen and (max-width:900px) {
+    .myskills{
+    padding:  20% 10%px;
+
+}
+.myskills h2{
+    color: var(--whiteColor);
+    font-size: 35px;
+    align-self: center;
+    margin-bottom: 20px;
+    padding-top: 10%;
+ 
+
+    
+}
+    
+}
+
+@media screen and (max-width:460px) {
+
+
+    .myskills h2{
+    color: var(--whiteColor);
+    font-size: 30px;
+    align-self: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+   
+
+    } 
+}
+
 /* Projects */
 .projects{
     width: 100%;
-    padding: 10% 10px;
+    padding: 9% 10px;
+    overflow: hidden;
+
 
 }
 
@@ -311,6 +359,7 @@ nav #logo:hover{
     font-weight: bold;
     transition: all 2s;
     margin-bottom: 70px;
+    cursor:context-menu;
 
 }
 .projects h3:hover{
@@ -324,12 +373,15 @@ nav #logo:hover{
     justify-content: space-evenly;
     gap:30px;
 
+
 }
 .projects .parent .project{
     background-color: var(--secondColor);
     width: 300px;
     border-radius: 40px 0;
     margin-bottom: 30px;
+        box-shadow: 2px 2px 5px 2px var(--hoverColor), -2px -2px 5px 2px var(--hoverColor);
+
    
 }
 
@@ -417,7 +469,7 @@ nav #logo:hover{
 }
 
 .projects .parent .project .image9{
-    background-image: url(./task8.png);
+    background-image: url(./task9.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -427,7 +479,7 @@ nav #logo:hover{
     
 }
 .projects .parent .project .image10{
-    background-image: url(./task9.png);
+    background-image: url(./task8.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -475,19 +527,32 @@ nav #logo:hover{
 @media screen and (max-width:900px) {
     .projects{
     width: 100%;
-    padding: 20% 10px;
+    padding-top: 15%;
     }
     .projects .parent{
       justify-content: center; 
+      justify-content: space-evenly;
+
 
 }
+}
+@media screen and (max-width:460px) {
+    .projects{
+    width: 100%;
+    padding-top: 20%;
+    }
+    .projects .parent{
+      justify-content: center; 
+      justify-content: space-evenly;
 
 
+}
 }
 
 /* Contact ME */
 .contactme{
     width: 100%;
+    overflow: hidden;
     padding-top: 10%;
 }
 
@@ -497,57 +562,56 @@ nav #logo:hover{
     text-align: center;
     font-weight: bold;
     transition: all 2s;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    cursor:context-menu;
+
 
 }
 .contactme h1:hover{
-    scale: 1.2;
+    scale: 1.1;
     color: var(--hoverColor);
 }
 
 .contactme .bg{
+    height: 500px;
     background-color: var(--blackColor);
-     display: flex;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-
-
 }
 .contactme .bg .box{
-    width: 30%;
+    width: 400px;
     background-color: var(--background);
     font-size: 15px;
     color: var(--whiteColor);
-    padding: 30px;
-    margin: 40px;
-    border-radius: 0 30px ;
+    border-radius: 0 25px;
     box-shadow: 3px 3px 2px 2px var(--hoverColor), -3px -3px 2px 2px var(--hoverColor);
-
+    padding: 30px;
+    display: inline;
 }
+
+
 .contactme .bg .box input{
-    color: var(--whiteColor);
-    border-radius: 5px;
-    margin: 10px;
-    padding-left: 20px;
-
-
+    color: var(--blackColor);
+    border-radius: 8px;
+    width: 60%;
+    margin: 15px;
 
 }
-.contactme .bg .box .message{
+.contactme .bg .box textarea{
+    height: 150px;
     width: 90%;
-    height: 130px;
     background-color: var(--whiteColor);
-    font-size: 10px;
+    font-size: 20px;
     color: black;
     border-radius: 5px;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
-.contactme .bg .box .send{
+.contactme .bg .box button{
     background-color: var(--whiteColor);
-    text-align: center;
     margin: 10px auto;
     width: 30%;
     font-size: 15px;
@@ -555,29 +619,59 @@ nav #logo:hover{
     color: black;
     border-radius: 10px;
     padding: 5px;
+    display: block;
+    cursor: pointer
 }
 @media screen and (max-width:900px) {
 
 .contactme{
     width: 100%;
-    padding-top: 20%;
-}
-.contactme .bg .box{
-    width:60%;
-    margin-top: 50px;
-
+    padding-top: 10%;
 }
 
 }
 @media screen and (max-width:460px) {
+.contactme{
+    width: 100%;
+    padding-top: 20%;
+    
+}
 
+.contactme h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    
 
+}
+
+.contactme .bg{
+    height: 450px;
+
+}
 .contactme .bg .box{
-    width:70%;
+    width: 300px;
+    font-size: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    display: inline;
+}
 
+
+.contactme .bg .box input{
+    color: var(--blackColor);
+    border-radius: 8px;
+    width: 55%;
+    margin: 5px;
+
+}
+.contactme .bg .box textarea{
+    width: 90%;
+    font-size: 15px;
+    margin-top: 5px;
 }
 
 }
+/* Footer */
 footer{
     display: flex !important;
     justify-content: space-evenly;
